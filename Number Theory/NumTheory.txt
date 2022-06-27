@@ -1,0 +1,2 @@
+This folder contains concepts related to Number Theory used in solving DSA Problems.
+
