@@ -6,14 +6,17 @@ Output : 10 3
  */
 // Naive Approach : iterate over the array for each element and mark if visited and display count.
 // TC : O(n^2) SC : O(n)
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Arrays;
 
 class CountFrequencyOfArray
 {
     public static void main(String[] args) {
         int[] arr={10, 20, 20, 10, 10, 20, 5, 20};
-        CountFrequency(arr);
+        //CountFrequency(arr);
+        CountFreqUsingHashMap(arr);
+
     }
     static void CountFrequency(int[] array)
     {
@@ -36,5 +39,28 @@ class CountFrequencyOfArray
             }
             System.out.println("Element :"+array[element]+" count: "+count);
         }
+    }
+    static void CountFreqUsingHashMap(int[] arr)
+    {
+        // using Hashmap to bring the TC to O(n)
+        HashMap<Integer, Integer> frequency = new HashMap<>();
+
+        for(int i = 0; i < arr.length;i++)
+        {
+            if(frequency.containsKey(arr[i]))
+            {
+                frequency.put(arr[i],frequency.get(arr[i])+1);
+            }
+            else
+            {
+                frequency.put(arr[i],1);
+            }
+        }
+        // we can directly print the hashmap but better to practice iterations over it for grasp
+        for(Map.Entry<Integer,Integer> iter : frequency.entrySet())
+        {
+            System.out.println("Element : "+iter.getKey()+" present "+iter.getValue());
+        }
+
     }
 }
