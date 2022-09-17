@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "Arrays",
+        "Binary Search",
+        "Hashing",
+        "Linked Lists",
+        "Number Theory",
+        "Patterns",
+        "Recursion",
+        "Stacks and Queues",
+        "Strings",
+        "Theory",
+        "Linked Lists/Custom Linked List"
+    ]
+}
